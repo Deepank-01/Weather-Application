@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- wrapper -->
+    <div class="wrapper">     
+        <h1>Weather APP</h1>
+     
+     <div class="tab-container">
+        <!-- Div tag for the 2 div -->
+       <button class="tab" data-userWeather> Your Weather</button>
+       <button class="tab" data-searchWeather>Search Weather</button>
+     </div>
+     <form class="sub-container1 form-container" data-searchForm >
+        <input placeholder="Search your city ...." data-searchInput id="city">
+         <button class="btn" type="sumbit" data-submitcity><img src="./assets/search.png" width="20" height="20" loading="lazy"></button>
+      </form>
+      <div class="weather-container">
+     <!-- Grant location  -->
+      <div class="sub-container grant-location-container">
+          <img src="./assets/location.png" width="80" height="80" loading="lazy">
+          <p>PLease click on grant button to acces the location </p>
+          <button class="btn" data-grantAccess >Grant location</button>
+
+      </div>
+      <!-- loading icon  -->
+      <div class="sub-container loading-container">
+        <img src="./assets/loading.gif"  width="80" height="80" loading="lazy">
+        <p>Loading</p>
+      </div>
+      <!-- weather information  -->
+      <div class="sub-container user-info-container">
+        <div class="name">
+            <p  data-cityName></p>
+            <img data-countryflag>
+        </div>
+        <p data-weatherDesc></p>
+        <img data-weatherIcon>
+        <p data-temp></p>
+         <!-- cards -->
+        <div class="subclass parameter-container">
+            <div class="parameter">
+                <img src="./assets/humidity.png">
+                <p>humidity</p>
+                <p data-humidity></p>
+
+            </div>
+            <!-- card2 -->
+            <div class="parameter">
+                <img src="./assets/cloud.png">
+                <p>Clouds</p>
+                <p data-cloudy></p>
+
+            </div>
+            <!-- card 3 -->
+            <div class="parameter">
+                <img src="./assets/wind.png">
+                <p>winds</p>
+                <p data-windy></p>
+                     
+            </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
